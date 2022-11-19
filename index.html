@@ -1,0 +1,1555 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pandu college Physics">
+    <meta name="robots" content="index,follow">
+    <title>Pandu college Physics</title>
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Arima:wght@200;300&family=Audiowide&family=Edu+SA+Beginner:wght@500&family=Gelasio:ital@1&family=Lobster&family=Luxurious+Roman&family=Montserrat:wght@400;500;700;900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,300;1,700&family=Potta+One&family=Roboto:ital,wght@0,700;0,900;1,400;1,500&family=Russo+One&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Ubuntu:ital,wght@0,400;0,500;1,500;1,700&family=Work+Sans:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Arima:wght@200;300&family=Audiowide&family=Dancing+Script:wght@700&family=Edu+SA+Beginner:wght@500&family=Gelasio:ital@1&family=Lobster&family=Luxurious+Roman&family=Montserrat:wght@400;500;700;900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,300;1,700&family=Potta+One&family=Roboto:ital,wght@0,700;0,900;1,400;1,500&family=Russo+One&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Ubuntu:ital,wght@0,400;0,500;1,500;1,700&family=Work+Sans:wght@400;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+    html {
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+        transition: 0.5s;
+        
+        
+    }    
+
+
+    body {
+
+        min-height: 100vh;
+
+
+    }
+
+    :root {
+        --primary-color: #000839;
+        --primary-shader: #00020b;
+        --para-color: #80849c;
+        --helper-color: #1264fa;
+        --white: #fff;
+        --fb: #4070f4;
+
+    }
+
+    a {
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .header {
+
+        height: 6em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 400;
+        padding: 0 50px;
+        /* overflow-x: hidden */
+    }
+/* 
+    .logo {
+        background: #1d2026;
+        border-radius: 4em;
+        font-size: 4.8rem;
+        color:white;
+        font-weight: 700;
+        font-family: 'Dancing Script', cursive;
+    } */
+    .logo {
+        width: 20em;
+        height: 40px;
+        background: linear-gradient(to right, #E80F88, blue);
+        /* background-image: linear-gradient(90deg, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+        background-size: 400%;
+        /* webkit-box-shadow: 3px 3px 5px linear-gradient(to right, #bc4e9c , #f80759); */
+        border-radius: 10em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: white;
+
+
+    }
+
+
+    .logo::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10em;
+        height: 40px;
+        border-radius: 50px;
+        background: inherit;
+        filter: blur(20px);
+        opacity: 0;
+        transition: opacity 0.5s;
+
+    }
+
+    .logo:hover::before {
+        opacity: 1;
+
+    }
+
+    .logo span {
+        z-index: 1;
+        font-size: 2em;
+        font-weight: 700;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .logo:hover {
+        animation: glow 4s linear infinite;
+    }
+
+    @keyframes glow {
+        0% {
+            background-position: 0;
+        }
+
+        100% {
+            background-position: 100%;
+        }
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+    }
+
+    .navList {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3.2em;
+        font-size: 1.5em;
+    }
+
+    .navList .navbarLinkBtn {
+        padding: 1em 2.2em;
+        background-color: var(--white);
+        border: 1px solid var(--helper-color);
+        color: var(--helper-color);
+        border-radius: 5em;
+        transition: 0.5s ease-in-out;
+    }
+
+    .navList .navbarLink:hover,
+    .navList .navbarLink:active {
+        color: var(--helper-color);
+    }
+
+    .navbarLinkBtn:hover,
+    .navbarLinkBtn:active {
+        background-color: var(--fb);
+        color: var(--white);
+    }
+
+    .navbarLink {
+        text-transform: uppercase;
+    }
+
+    .mobileNav {
+        font-size: 2em;
+        display: none;
+    }
+
+    .mobile_nav {
+        display: none;
+    }
+
+    main {}
+
+    .section-home {}
+
+    .blue {
+
+        height: 40em;
+        background: var(--fb);
+        /* background: linear-gradient(90deg ,var(--fb),#aac7fd); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .blue-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .blue-text .hedings1 {
+        font-size: 4em;
+        color: var(--white);
+        font-weight: 700;
+        margin-bottom: 1.5em;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .blue-text .hedings2 {
+        font-size: 10em;
+        color: var(--white);
+        font-weight: 700;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .blue-text .hedings3 {
+
+        color: black;
+        font-weight: 700;
+        font-size: 4em;
+
+    }
+
+    .sidebar {
+
+        z-index: 10000;
+        position: fixed;
+        top: 20%;
+        left: 0;
+        width: 5em;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2em 0;
+        gap: 2.3em;
+        background-color: var(--fb);
+        border-radius: 40px;
+        box-shadow: 2px 3px 5px #aac7fd;
+    }
+
+    .side-btn {
+        width: 1.5em;
+        height: 1.5em;
+        transition: 0.5s ease-in-out;
+        font-size: 2.3em;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+    }
+
+    .side-btn:hover {
+        background: white;
+
+    }
+    textarea {
+   resize: none;
+}
+
+
+    ion-icon {
+        /* color: var(--white); */
+        color: var(--white);
+        ;
+
+    }
+
+    ion-icon:hover {
+        color: var(--primary-shader);
+    }
+
+    .img1 {
+
+
+
+        height: 50em;
+        background: url("s.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        position: relative;
+        align-items: top;
+        justify-content: center;
+
+
+
+    }
+
+    .white {
+        width: 30em;
+        height: 6em;
+        background: white;
+        box-shadow: 3px 3px 4px grey;
+        border-radius: 40px;
+        position: relative;
+        top: -3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+
+
+    }
+
+    .white h1 {
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+
+    .sec-2 {
+        height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+
+    }
+
+    .sec-3 {
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .sec-4 {
+        height: 100vh;
+        display: flex;
+        background: #1d2026;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .sec-5 {
+        height: 100vh;
+        display: flex;
+        background: #1d2026;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .sec-6 {
+        height: 100vh;
+        display: flex;
+        background: #1d2026;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .sec-7 {
+        height: 100vh;
+        display: flex;
+        background: #1d2026;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    .comment{
+        height: 100vh;
+      
+    }
+    .sec-8{
+        height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       
+        background: #1d2026;
+        
+       
+     
+    }
+    li{
+        color:white;
+    }
+    .sec-9{
+        height: 100vh;
+        display: flex;
+        background: #1d2026;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sec-6 img {
+        width: 30em;
+        height: 30em;
+    }
+
+
+    .intro1 {
+        width: 100%;
+        height: 50%;
+        background: var(--fb);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .intro2 {
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(90deg, var(--fb), #aac7fd);
+
+    }
+
+    .int-img1 {
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+
+    }
+
+    .int-img1 img {
+        padding: 2em 2em;
+        width: 28em;
+
+    }
+
+    .int1 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 30em;
+    }
+
+    .int1 h1 {
+        font-size: 5em;
+        color: var(--primary-color);
+
+    }
+
+    .int1 p {
+        font-size: 1.5em;
+        color: var(--white);
+        /* color: black; */
+        font-weight: 200;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    svg {
+        position: absolute;
+        z-index: -1;
+        overflow-x: hidden;
+    }
+
+    .lamp {
+
+
+        position: absolute;
+        top: 0;
+        left: 10%;
+        width: 20em;
+
+    }
+
+    .lamp1 {
+        width: 100%;
+
+    }
+
+    .lamp2 {
+        position: absolute;
+        top: 97%;
+        left: 47%;
+        transform: translateX(-50%);
+        width: 70em;
+        display: flex;
+
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        font-size: 1.2em;
+        color: white;
+    }
+
+    input {
+        width: 20em;
+        height: 3em;
+        border-radius: .2em;
+        border: none;
+        padding-left: 1em;
+        margin: 0.5em;
+        outline: none;
+
+    }
+
+    textarea {
+        width: 20em;
+        height: 10em;
+        border-radius: .2em;
+        border: none;
+        padding-left: 1em;
+        margin: 0.5em;
+        outline: none;
+    }
+
+    .submit {
+        background: var(--fb);
+        color: white;
+
+    }
+    /* .comment_sec1{
+        width: 20em;
+        height: 5em;
+        border-radius: 2em;
+        background: whitesmoke;
+        margin-top: 5em;
+    }
+    .comment_section{
+        width: 100%;
+    }
+    .comment{
+     
+    } */
+
+
+
+
+
+    /* media */
+    @media(max-width:930px) {
+        html {
+            font-size: 55.56%;
+        }
+
+        .header {
+
+            position: relative;
+
+        }
+
+        .navList {
+            display: none;
+        }
+
+
+
+        .mobile_nav {
+            display: block;
+        }
+
+        .mobileNav {
+            font-size: 20px;
+            display: block;
+            color: black;
+            position: absolute;
+            top: 40%;
+            right: 2em;
+
+        }
+
+        .sidebar {
+
+            width: 3em;
+            height: auto;
+            display: none;
+
+        }
+
+        .side-btn {
+            width: 1.2em;
+            height: 1.2em;
+
+
+        }
+
+        .blue-text .hedings1 {
+            font-size: 1.8em;
+            padding: 0 1em;
+
+
+        }
+
+        .blue-text .hedings2 {
+            font-size: 4em;
+
+        }
+
+        .blue-text .hedings3 {
+
+            color: black;
+
+
+        }
+
+        .img1 {
+
+            width: 100%;
+
+            height: 50em;
+
+
+
+
+        }
+
+        .white {
+            width: 20em;
+            height: 3em;
+
+
+            top: -1.5em;
+            left: 0;
+
+
+
+        }
+
+        .intro1 {
+            width: 100%;
+            height: 50%;
+            background: var(--fb);
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .intro2 {
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(90deg, var(--fb), #aac7fd);
+
+        }
+
+        .int-img1 {
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+
+        }
+
+        .int-img1 img {
+            padding: 0em 0em;
+            width: 15em;
+
+        }
+
+        .int1 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            padding: 0 2em;
+        }
+
+        .int1 h1 {
+            font-size: 2em;
+            color: var(--primary-color);
+
+        }
+
+        .int1 p {
+            font-size: 1em;
+            color: var(--white);
+            /* color: black; */
+            font-weight: 200;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        svg {
+
+
+            top: -41%;
+
+        }
+
+        .lamp {
+
+
+            position: absolute;
+            top: 0;
+            left: 20%;
+            width: 10em;
+
+
+        }
+
+        .lamp1 {
+            width: 100%;
+
+        }
+
+        .lamp2 {
+            position: absolute;
+            top: 97%;
+            left: 45%;
+            transform: translateX(-50%);
+            width: 37em;
+            display: flex;
+
+        }
+
+
+
+
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 48%;
+        font-size: 1.2em;
+        color: white;
+    }
+
+    .int-img2 img {
+        width: 50em;
+        padding-right: 2em;
+    }
+
+    .sec-4 .intro1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .comment-section {
+        width:80em;
+        height:80em;
+        background: #1d2026;
+        overflow: scroll;
+      
+        
+      
+
+    }
+    .comment-section::-webkit-scrollbar {
+    display: none;
+}
+
+
+    .comment-section h1 {
+        padding-left: 1em;
+        color: white;
+    }
+
+    .comment_section-sec1 {
+       
+        width:80%;
+        height: 10em;
+        margin:1em;
+        border-radius: 2em;
+
+
+        /* background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+        background:white;
+
+
+    }
+    .comment_section-sec1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+   
+    }
+    .comment_section-sec1 h2{
+        padding-left: 1em;
+    }
+    .comment_section-sec1 p{
+        padding-bottom: 1em;
+        padding-left: 1em;
+        color:white;
+        font-size:1.3em;
+        
+    }
+     .fa-regular {
+       font-size: 2em;
+      margin-bottom:1em ;
+      color:black;
+        
+    }
+
+
+
+
+
+
+    /* media */
+    @media(max-width:930px) {
+        .sec-8{
+            padding-left:5em;
+        }
+
+        footer {
+
+            left: 38%;
+
+        }
+
+        .header {
+
+            position: relative;
+
+        }
+
+        .navList {
+            display: none;
+        }
+
+
+
+        .mobile_nav {
+            display: block;
+        }
+
+        .mobileNav {
+            font-size: 20px;
+            display: block;
+            color: black;
+            position: absolute;
+            top: 40%;
+            right: 2em;
+
+        }
+
+        .sidebar {
+
+            width: 3em;
+            height: auto;
+            display: none;
+
+        }
+
+        .side-btn {
+            width: 1.2em;
+            height: 1.2em;
+
+
+        }
+
+        .blue-text .hedings1 {
+            font-size: 1.8em;
+            padding: 0 1em;
+
+
+        }
+
+        .blue-text .hedings2 {
+            font-size: 4em;
+
+        }
+
+        .blue-text .hedings3 {
+
+            color: black;
+
+
+        }
+
+        .img1 {
+
+            width: 100%;
+
+            height: 50em;
+
+
+
+
+        }
+
+        .white {
+            width: 20em;
+            height: 3em;
+
+
+            top: -1.5em;
+            left: 0;
+
+
+
+        }
+
+        .intro1 {
+            width: 100%;
+            height: 50%;
+            background: var(--fb);
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .intro2 {
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(90deg, var(--fb), #aac7fd);
+
+        }
+
+        .int-img1 {
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+
+        }
+
+        .int-img1 img {
+            padding: 0em 0em;
+            width: 15em;
+
+        }
+
+        .int1 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            padding: 0 2em;
+        }
+
+        .int1 h1 {
+            font-size: 2em;
+            color: var(--primary-color);
+
+        }
+
+        .int1 p {
+            font-size: 1em;
+            color: var(--white);
+            /* color: black; */
+            font-weight: 200;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        svg {
+
+
+            top: -41%;
+
+        }
+
+        .lamp {
+
+
+            position: absolute;
+            top: 0;
+            left: 18%;
+            width: 10em;
+
+
+        }
+
+        .lamp1 {
+            width: 100%;
+
+        }
+
+        .lamp2 {
+            position: absolute;
+            top: 97%;
+            left: 45%;
+            transform: translateX(-50%);
+            width: 37em;
+            display: flex;
+
+        }
+
+        .int-img2 img {
+            width: 40em;
+            
+            padding-right: 0em;
+        }
+
+
+    }
+</style>
+
+<body>
+    <header class="header">
+        <a href="#" target="_blank" class="logo"><span>Spectrum 16</span></a>
+        <nav class="navbar">
+            <ul class="navList">
+                <li><a href="#sec1" class="navbarLink">Home</a></li>
+                <li><a href="#sec5" class="navbarLink">image</a></li>
+                <li><a href="#sec6" class="navbarLink">doc</a></li>
+                <li><a href="#sec2" class="navbarLink">Intro</a></li>
+                <li><a href="#sec5" class="navbarLinkBtn">ParthX</a></li>
+            </ul>
+        </nav>
+        <div class="mobile_nav">
+            <ion-icon name="menu-outline" class="mobileNav"></ion-icon>
+            <!-- <ion-icon name="close-outline" class="mobileNav"></ion-icon> -->
+        </div>
+    </header>
+
+    <!-- main section -->
+    <main>
+        <section class="section-home" id="sec1">
+            <div class="blue">
+                <div class="blue-text">
+                    <h1 class="hedings1">Annual Bulletin of Department of Physics, Pandu College</h1>
+                    <h1 class="hedings2">Spectrum 16</h1>
+                    <p class="hedings3">2022-23</p>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div><a href="#sec1" class="side-btn" id="Home">
+                        <ion-icon name="home-outline"></ion-icon>
+
+                    </a></div>
+                <div><a href="#sec5" class="side-btn" id="Image">
+                        <ion-icon name="camera-outline"></ion-icon>
+
+                    </a></div>
+                <div><a href="#sec6" class="side-btn" id="doc">
+                        <ion-icon name="document-outline"></ion-icon>
+
+                    </a></div>
+                <div><a href="#" class="side-btn" id="Google">
+                        <ion-icon name="logo-google"></ion-icon>
+
+                    </a></div>
+                <div><a href="#sec2" class="side-btn" id="nav">
+                        <ion-icon name="navigate-outline" class="back"></ion-icon>
+
+                    </a></div>
+                <div class="side-btn" id="bulb">
+                    <ion-icon name="bulb-outline"></ion-icon>
+
+                </div>
+                <div class="side-btn" id="bulbof">
+                    <ion-icon name="sunny-outline"></ion-icon>
+
+                </div>
+            </div>
+            <div class="img1">
+                <div class="white">
+                    <h1>Department of Physics</h1>
+                </div>
+            </div>
+
+
+
+        </section>
+        <section class="sec-2" id="sec2">
+            <div class="intro1">
+                <div class="int1">
+                    <br> <br><br> <br> <br><br><br><br>
+                    <h1>C. V. Raman ,Nobel Prize in Physics in 1930 </h1>
+                    <p> 
+                        <br>
+                        The Academy of Sciences, has resolved to award the Nobel Prize in Physics for 1930 to Sir Chandrasekhara Venkata Raman – for his work on the scattering of light and for the discovery of the effect named after him.
+                        <br><br><br>
+
+                      <p style="color:black;
+                      font-weight: bold;"> " Ask the right questions, and nature will open the doors to her secrets I am the master of my failure… If I never fail how will I ever learn."            <br> --- C.V Raman</p>
+                    </p>
+                </div>
+                <div class="int-img1"><img src="cv.webp" alt="error">
+                    <p>C. V. Raman <br> <br>
+
+                        Nobel Prize in Physics in 1930 </p>
+                </div>
+            </div>
+            <div class="intro1">
+                <div class="int1">
+                    <h1> Dr. APJ Abdul Kalam, 'Missile Man of India'</h1>
+                    <br>
+                    <p>
+
+                        “Don't take rest after your first victory because if you fail in second, more lips are waiting to say that your first victory was just luck.” "Dream, dream, dream. Dreams transform into thoughts and thoughts result in action." "To succeed in your mission, you must have single-minded devotion to your goal."</p>
+                </div>
+                <div class="int-img1">
+                    <img src="ab.jpg" alt="error">
+                    <p>Dr. APJ Abdul Kalam, 
+                        <br><br>
+                        'Missile Man of India'
+                        <br><br>
+                        
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="sec-3" id="sec3">
+            <div class="intro1" style="background-color: transparent;">
+                <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg"
+                    class="transition duration-300 ease-in-out delay-150">
+                    <defs>
+                        <linearGradient id="gradient" x1="46%" y1="0%" x2="54%" y2="100%">
+                            <stop offset="5%" stop-color="#4070f4"></stop>
+                            <stop offset="95%" stop-color="#32ded4"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path
+                        d="M 0,600 C 0,600 0,150 0,150 C 124.19138755980862,178.62200956937798 248.38277511961724,207.24401913875596 335,190 C 421.61722488038276,172.75598086124404 470.6602870813397,109.64593301435407 558,112 C 645.3397129186603,114.35406698564593 770.9760765550241,182.17224880382773 867,181 C 963.0239234449759,179.82775119617227 1029.4354066985645,109.66507177033493 1120,93 C 1210.5645933014355,76.33492822966507 1325.2822966507179,113.16746411483254 1440,150 C 1440,150 1440,600 1440,600 Z"
+                        stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.4"
+                        class="transition-all duration-300 ease-in-out delay-150 path-0"
+                        transform="rotate(-180 720 300)"></path>
+                    <defs>
+                        <linearGradient id="gradient" x1="46%" y1="0%" x2="54%" y2="100%">
+                            <stop offset="5%" stop-color="#4070f4"></stop>
+                            <stop offset="95%" stop-color="#32ded4"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path
+                        d="M 0,600 C 0,600 0,300 0,300 C 64.65071770334927,316.9473684210526 129.30143540669854,333.89473684210526 247,321 C 364.69856459330146,308.10526315789474 535.444976076555,265.3684210526316 629,258 C 722.555023923445,250.63157894736838 738.9186602870814,278.6315789473684 817,292 C 895.0813397129186,305.3684210526316 1034.8803827751196,304.10526315789474 1149,303 C 1263.1196172248804,301.89473684210526 1351.55980861244,300.9473684210526 1440,300 C 1440,300 1440,600 1440,600 Z"
+                        stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53"
+                        class="transition-all duration-300 ease-in-out delay-150 path-1"
+                        transform="rotate(-180 720 300)"></path>
+                    <defs>
+                        <linearGradient id="gradient" x1="46%" y1="0%" x2="54%" y2="100%">
+                            <stop offset="5%" stop-color="#4070f4"></stop>
+                            <stop offset="95%" stop-color="#32ded4"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path
+                        d="M 0,600 C 0,600 0,450 0,450 C 68.12440191387557,456.0382775119617 136.24880382775115,462.07655502392345 241,471 C 345.75119617224885,479.92344497607655 487.12918660287085,491.73205741626793 591,488 C 694.8708133971292,484.26794258373207 761.2344497607656,464.9952153110048 863,443 C 964.7655502392344,421.0047846889952 1101.933014354067,396.287081339713 1204,397 C 1306.066985645933,397.712918660287 1373.0334928229665,423.8564593301435 1440,450 C 1440,450 1440,600 1440,600 Z"
+                        stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1"
+                        class="transition-all duration-300 ease-in-out delay-150 path-2"
+                        transform="rotate(-180 720 300)"></path>
+                </svg>
+                <div class="int1">
+                    <h1 style="color:var(--white);">Words from Head of the Department</h1>
+                    <br>
+                    <p style="color: black;
+                    font-weight: 700; ">
+
+                        I am extremely delighted & glad to know that the departmental bulletin “Spectrum 2022” is going
+                        to publish. “Knowledge is Power”- this bulletin is the collection of thoughts, ideas and
+                        creative thinking of young minds. Credit goes to the students who edited and contributed through
+                        their writings in “SPECTRUM 2021”.
+                        <br> <br>
+                        ........My best wishes to everyone associated with this departmental publication.
+                    </p>
+                </div>
+                <div class="int-img1">
+                    <img src="hod.jpeg" alt="error">
+                    <p style="color: black;">Professor and HOD
+                        <br><br>
+                        Department of Physics
+                        <br><br>
+                        Pandu College
+
+                    </p>
+                </div>
+            </div>
+            <div class="int1">
+                    <h1 style="color:var(--white);">Words from Head of the Department</h1>
+                    <br>
+                    <p style="color: black;
+                    font-weight: 700; ">
+
+Physics, which also means ‘knowledge of nature’, is a subject of science which studies matter, its movements and its action through space and time in nature.
+
+The first and main important objective of physics is to understand how the universe functions and assist in making new discoveries with time. Physics is one of the most important subjects and areas of study which fuels most of the work we get done by today's machines.
+                    </p>
+                </div>
+                <div class="int-img1">
+                    <img src="physics.jpg" alt="error">
+                
+                </div>
+            </div>
+       
+        </section>
+
+
+        <section class="sec-4" id="sec4">
+
+            <div class="intro1" style="background-color: transparent;
+          
+                ;">
+
+                <div class="int1">
+                    <h1 style="color: var(--helper-color)"> From Editor's Desk </h1>
+                    <br>
+                    <br>
+                    <h3 style="color:var(--helper-color)"> (From left to right : Manjit Ray, Kankan Das, Partha Sarathi Das, Shiva Prasad Medhi)</h3> <br>
+                    <p style="color: var(--white);
+                    font-weight:700"> <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+
+
+
+
+                   We on the behalf of the editorial board of SPECTRUM – 16 would like to offer heartiest gratitude to the Department of Physics, Pandu College, all the authors and readers & pray to god that all of us have a wonderful feature ahead.<br><br>
+                  
+                      We would like to extend special thanks to Dr. Bandana Das, HOD of Physics department and all the professors of our department to give us the opportunity to publish the spectrum magazine and guiding us all the way. <br>
+                   We want to thank all the students of our department since they provided the article during Durga Pooja vacation and we were able to complete the work of our magazine within 9 days.<br>
+                     Lastly, with apologies for any error or unseen mistakes from our part, the editorial board of Spectrum – 16 wishes all the readers a Happy New Year, 2023 in advance and wish a wonderful year ahead.<br>
+                    </p>
+                </div>
+                <div class="int-img2"><img src="104.jpg" alt="error">
+                  
+                </div>
+                <div class="lamp">
+                    <img src="lamp.png" alt="error" class="lamp1">
+                    <img src="light.png" alt="error" class="lamp2">
+                </div>
+
+
+
+        </section>
+        <section class="sec-5" id="sec5">
+            <h1 style="font-size:2em ;
+            padding-top:2em;
+            color:var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;">Image</h1>
+
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    
+                    <img src="1.jpeg" style="width:100%" alt="error">
+                    
+                </div>
+
+                <div class="mySlides fade">
+                    
+                    <img src="2.jpeg" style="width:100%" alt="error">
+                    
+                </div>
+
+                <div class="mySlides fade">
+                  
+                    <img src="par.jpeg" style="width:100%" alt="error">
+                   
+                </div>
+
+                <div class="mySlides fade">
+                    
+                    <img src="par1.jpeg" style="width:100%" alt="error">
+                   
+                </div>
+
+                <div class="mySlides fade">
+                    
+                    <img src="par2.jpeg" style="width:100%" alt="error">
+                   
+                </div>
+                <div class="mySlides fade">
+                    
+                    <img src="10.jpg" style="width:100%" alt="error">
+                   
+                </div>
+                <div class="mySlides fade">
+                    
+                    <img src="101.jpg" style="width:100%" alt="error">
+                   
+                </div>
+                <div class="mySlides fade">
+                    
+                    <img src="103.jpg" style="width:100%" alt="error">
+                   
+                </div>
+                <div class="mySlides fade">
+                    
+                    <img src="10.jpg" style="width:100%" alt="error">
+                   
+                </div>
+                <div class="mySlides fade">
+                    
+                    <img src="1st sem.jpeg" style="width:100%" alt="error">
+                   
+                </div>
+                <div class="mySlides fade">
+                    
+                    <img src="1sts.jpeg" style="width:100%" alt="error">
+                   
+                </div>
+                <div class="mySlides fade">
+                    
+                    <img src="raju.jpeg" style="width:100%" alt="error">
+                   
+                </div>
+                <div class="mySlides fade">
+                    
+                    <img src="practical.jpeg" style="width:100%" alt="error">
+                   
+                </div>
+                <div class="mySlides fade">
+                    
+                    <img src="practical1.jpeg" style="width:100%" alt="error">
+                   
+                </div>
+                <div class="mySlides fade">
+                    
+                    <img src="practical2.jpeg" style="width:100%" alt="error">
+                   
+                </div>
+                
+                
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </section>
+        <section class="sec-6" id="sec6">
+            <img src="Qr.png" alt="error">
+            <h1 style="color: white;
+     margin-top:50px">Scan the code</h1>
+     
+     <br>
+     <h1> Or Open a PDF file <a href="college.pdf" style="color:var(--helper-color)">Click for download</a></h1>
+
+        </section>
+        <section class="sec-7" id="sec-7">
+        <div class="comment">
+            <form method="POST">
+                <div class="comment_main_box">
+                    <div><input type="text" class="name" name="name" placeholder="Enter your name"></div>
+                    <div><input type="text" class="semester" name="semester" placeholder="class and stream"></div>
+                    <div><textarea name="comment" id="comment" cols="30" rows="10"></textarea></div>
+                    <div><input type="submit" class="submit" name="submit"></div>
+                </div>
+            </form>
+      
+      
+           
+        </section>
+
+
+
+        <section class="sec-8">
+    <div class="comment-section">
+        <h1>COMMENTS</h1>
+        
+             <div class="comment_section-sec1">
+         
+            <h2 ><i class="fa-solid fa-user" style="margin-right:1em" ></i> shiva</h2>
+            <p style="color:black">good</p>
+            
+    </div>
+
+
+        
+      
+    </section>
+    
+    </main>
+    <section class="sec-9">
+ 
+        
+    <footer>© All Rights Reserved -- parthX</footer>
+    </section>
+    <script src="https://kit.fontawesome.com/1df3c9a017.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        const mobileNav = document.querySelector(".mobileNav");
+        const sidebar = document.querySelector(".sidebar");
+        const back = document.querySelector(".back");
+        const bulb = document.querySelector("#bulb")
+        const bulbof = document.querySelector("#bulbof")
+        const light = document.querySelector(".lamp2");
+        const navbarLinkBtn = document.querySelector(".navbarLinkBtn");
+        navbarLinkBtn.addEventListener("click", () => {
+            sidebar.style.cssText = "display:flex"
+        })
+        back.addEventListener("click", () => {
+            sidebar.style.cssText = "display:none"
+        })
+        mobileNav.addEventListener("click", () => {
+            sidebar.style.cssText = "display:flex"
+
+        })
+        bulb.addEventListener("click", () => {
+            light.style.cssText = "display:none"
+        })
+        bulbof.addEventListener("click", () => {
+            light.style.cssText = "display:flex"
+        })
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>
+
